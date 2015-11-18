@@ -21,5 +21,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "font-awesome": "fontawesome#~4.4.0"
+  }
 }
