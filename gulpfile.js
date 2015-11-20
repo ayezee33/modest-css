@@ -1,16 +1,17 @@
 "use strict";
 
 var gulp = require('gulp'),
-browserSync = require('browser-sync'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-imagemin = require ('gulp-imagemin'),
-   cache = require ('gulp-cache'),
-  rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    maps = require('gulp-sourcemaps'),
-    plumber = require('gulp-plumber'),
-     del = require('del');
+  browserSync  = require('browser-sync'),
+  concat       = require('gulp-concat'),
+  uglify       = require('gulp-uglify'),
+  imagemin     = require ('gulp-imagemin'),
+  cache        = require ('gulp-cache'),
+  rename       = require('gulp-rename'),
+  sass         = require('gulp-sass'),
+  maps         = require('gulp-sourcemaps'),
+  plumber      = require('gulp-plumber'),
+  autoprefixer = require('gulp-autoprefixer'),
+  del          = require('del');
 
 
 gulp.task("concatScripts", function() {
@@ -42,6 +43,7 @@ gulp.task('images', function() {
 
 gulp.task('sass', function() {
   return gulp.src("src/scss/application.scss")
+      .pipe(autoprefixer('last 2 version'))
       .pipe(plumber())
       .pipe(sass())
       .pipe(plumber.stop())
