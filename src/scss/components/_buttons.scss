@@ -64,3 +64,6 @@ input[type="button"].button-primary:focus {
   background-color: $secondary-color !important;
   color: $white !important;
 }
+.button-gradient {
+  background: linear-gradient(45deg, #39F5D2 0%, #04CFFE 100%)!important;
+}
