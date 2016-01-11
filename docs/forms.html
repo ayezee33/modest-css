@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modest SASS Framework</title>
+<script src="dist/js/app.js"></script>
+<link rel="stylesheet" href="../dist/css/application.css">
+<link rel="stylesheet" href="../src/demo.css">
+<link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
+</head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="twelve columns">
+          <h2 class="brand-mark"><a href="docs.html">M</a></h2>
+          <ul class="right">
+            <a href="typography.html"><li>Typography</li></a>
+            <a href="components.html"><li>Components</li></a>
+            <a href="forms.html"><li>Forms</li></a>
+            <a href="tables.html"><li>Tables</li></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="ten offset-by-one columns">
+          <h2>Forms</h2>
+            <p>
+              Form example
+            </p>
+            <hr>
+        </div>
+
+        <div class="ten offset-by-one columns">
+          <form>
+            <div class="row">
+              <div class="six columns">
+                <label for="exampleEmailInput">Your email</label>
+                <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+              </div>
+              <div class="six columns">
+                <label for="exampleRecipientInput">Reason for contacting</label>
+                <select class="u-full-width" id="exampleRecipientInput">
+                  <option value="Option 1">Questions</option>
+                  <option value="Option 2">Admiration</option>
+                  <option value="Option 3">Can I get your number?</option>
+                </select>
+              </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+              <input type="checkbox">
+              <span class="label-body">Send a copy to yourself</span>
+            </label>
+            <input class="button-primary" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="four columns">
+          <p>Created by <a href="https://github.com/ayezee33">AyeZee33</a> <i class="fa fa-battery-full"></i></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
