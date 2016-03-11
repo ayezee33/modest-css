@@ -15,9 +15,7 @@ var gulp = require('gulp'),
 
 
 gulp.task("concatScripts", function() {
-    return gulp.src([
-        'src/js/app.js'
-        ])
+    return gulp.src(['src/js/app.js'])
     .pipe(plumber())
     .pipe(maps.init())
     .pipe(concat('app.js'))
@@ -27,10 +25,9 @@ gulp.task("concatScripts", function() {
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
-  return gulp.src("src/js/app.js")
+  return gulp.src("src/js/**/*.js")
     .pipe(plumber())
     .pipe(uglify())
-    .pipe(rename('app.min.js'))
     .pipe(plumber.stop())
     .pipe(gulp.dest('dist/js'));
 });
