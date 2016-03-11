@@ -1,3 +1,7 @@
+//$ npm install
+//$npm install gulp
+//$ npm install browser sync gulp-concat gulp-uglify gulp-imagemin gulp-rename gulp-sass gulp-sourcemaps gulp-plumber gulp-autoprefixer del --save-dev
+
 "use strict";
 
 var gulp = require('gulp'),
@@ -5,7 +9,6 @@ var gulp = require('gulp'),
   concat       = require('gulp-concat'),
   uglify       = require('gulp-uglify'),
   imagemin     = require ('gulp-imagemin'),
-  cache        = require ('gulp-cache'),
   rename       = require('gulp-rename'),
   sass         = require('gulp-sass'),
   maps         = require('gulp-sourcemaps'),
