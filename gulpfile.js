@@ -1,7 +1,3 @@
-//$ npm install
-//$npm install gulp
-//$ npm install browser sync gulp-concat gulp-uglify gulp-imagemin gulp-rename gulp-sass gulp-sourcemaps gulp-plumber gulp-autoprefixer del --save-dev
-
 "use strict";
 
 var gulp = require('gulp'),

@@ -14,13 +14,39 @@
   "author": "AyeZee33",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "2.6.5",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.4.2",
+    "gulp-uglify": "^1.4.2"
+
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "uglify": "^0.1.5",
     "browser-sync": "2.6.5",
-  }
+    "gulp-imagemin": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-autoprefixer": "*",
+    "gulp-plumber": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayezee33/modest-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ayezee33/modest-css/issues"
+  },
+  "homepage": "https://github.com/ayezee33/modest-css#readme"
 }
