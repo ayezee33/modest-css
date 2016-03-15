@@ -1,0 +1,66 @@
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: $compontent-height;
+  padding: $default-horizontal-padding;
+  margin: 2rem 0;
+  color: $dark;
+  background: $gray;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: $compontent-height;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  @include border-radius(.5rem);
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: $dark;
+  border-color: $gray;
+  outline: 0;
+}
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: $white;
+  background-color: $primary-color;
+  border-color: $white; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: $white;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+.button-secondary {
+  background-color: $secondary-color !important;
+  color: $white !important;
+}
