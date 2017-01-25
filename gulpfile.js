@@ -3,6 +3,8 @@
 var gulp = require('gulp'),
   browserSync  = require('browser-sync'),
   concat       = require('gulp-concat'),
+  minify       = require('gulp-minify-css'),
+  merge        = require('merge-stream'),
   uglify       = require('gulp-uglify'),
   imagemin     = require ('gulp-imagemin'),
   rename       = require('gulp-rename'),
@@ -11,7 +13,6 @@ var gulp = require('gulp'),
   plumber      = require('gulp-plumber'),
   autoprefixer = require('gulp-autoprefixer'),
   del          = require('del');
-
 
 gulp.task("concatScripts", function() {
     return gulp.src(['src/js/app.js'])
@@ -30,6 +31,26 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
     .pipe(plumber.stop())
     .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('minifyCss', function() {
+
+    var scssStream = gulp.src('src/scss/*.scss')
+        .pipe(sass())
+        .pipe(concat('src/scss/*.scss'))
+    ;
+
+    // var cssStream = gulp.src([...])
+    //     .pipe(concat('css-files.css'))
+    // ;
+
+    var mergedStream = merge(scssStream)
+        .pipe(concat('/css/application.css'))
+        .pipe(minify())
+        .pipe(gulp.dest('dist/'));
+
+    return mergedStream;
+});
+
 
 gulp.task('images', function() {
   return gulp.src('src/images/**/*')
@@ -52,7 +73,7 @@ gulp.task('clean', function() {
 });
 
 
-gulp.task("build", ['minifyScripts', 'sass' ,'images'], function() {
+gulp.task("build", ['minifyScripts', 'minifyCss', 'sass', 'images'], function() {
   return gulp.src(["css/**/*.scss", "js/**/*.js", "images/**", "fonts/**"], { base: './'})
             .pipe(gulp.dest('dist'));
 });

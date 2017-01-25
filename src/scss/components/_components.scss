@@ -151,19 +151,19 @@ _________________________________________________ */
 }
 
 .success {
-  @extend .message;
+  @extend .message!optional;
   background: lighten( $green, 20% );
   color: darken($green, 20%);
   border-bottom: 3px $green solid;
 }
 .warning {
-  @extend .message;
+  @extend .message!optional;
   background: lighten( $yellow, 20% );
   color: darken($yellow, 20%);
   border-bottom: 3px $yellow solid;
 }
 .error {
-  @extend .message;
+  @extend .message!optional;
   background: lighten( $red, 20% );
   color: darken($red, 20%);
   border-bottom: 3px $red solid;
